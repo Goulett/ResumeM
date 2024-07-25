@@ -1,0 +1,81 @@
+﻿:root {
+	--accent-color: #013B61;
+	--a4Width: 816px;
+	--a4Height: 1056px;
+	--pageCount: 3;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: 0.35s ease;
+	font-style: normal;
+	color: #282828;
+	font-size: 14px;
+}
+
+article {
+	background-color: #fefefe;
+	width: var(--articleWidth);
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: var(--a4Width);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	height: calc(var(--a4Height) * var(--pageCount));
+}
+
+body {
+	font-family: 'Open Sans';
+	letter-spacing: 0px;
+	background-color: #282828;
+}
+
+@media print {
+	body {
+		background-color: #FFF;
+	}
+}
+
+main {
+	display: flex;
+	background-color: #FFF;
+	min-height: calc(var(--a4Height) * var(--pageCount));
+	height: 100%;
+	flex: 1;
+}
+
+/*Tools*/
+.split {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+	.split div:nth-child(2) {
+		text-align: right;
+	}
+
+/*Resume switcher.*/
+@media print {
+	.hidden-on-print {
+		display: none;
+	}
+}
+
+form {
+	width: 600px;
+	margin: 0 auto;
+	padding: 3em;
+}
+
+select {
+	width: 400px
+}

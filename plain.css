@@ -1,0 +1,147 @@
+﻿:root {
+	--pageCount: 2 !important;
+}
+
+main {
+	flex-direction: column;
+}
+
+.header {
+	text-align: center;
+	padding: 2em;
+	padding-bottom: 0;
+}
+
+section {
+	padding: 2em;
+	padding-bottom: 0;
+	page-break-inside: avoid;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.25em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.section-title {
+	margin-bottom: 0.5em;
+}
+
+ul {
+	list-style-position: inside;
+}
+
+.split-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Summary*/
+.introduction:last-child{
+	margin-bottom:0;
+}
+
+/*Skills list.*/
+ul.skills {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+	ul.skills li {
+		--columnCount: 3;
+		width: calc(100% / var(--columnCount));
+		margin-bottom: 0;
+	}
+
+/*Experience*/
+.experience:not(:first-child) {
+	margin-top: 1.25em;
+}
+
+.experience-section {
+	padding-top: 0.5em;
+	padding-left: 1em;
+}
+
+	.experience-section ul {
+		padding-left: 1em;
+	}
+
+.experience-header div {
+	width: 50%;
+}
+
+.experience {
+	page-break-inside: avoid;
+}
+
+/*References*/
+.references ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.reference {
+	margin-top: 0.5em;
+	width: 50%;
+}
+
+	.reference p {
+		padding-left: 20px;
+		margin-bottom: 0.5em;
+	}
+
+	.reference > h5 {
+		display: inline-block;
+	}
+
+	.reference .split {
+		margin-left: 20px;
+	}
+
+/*Projects*/
+.project:not(:first-child) {
+	margin-top: 1.25em;
+}
+
+.project p {
+	margin-bottom: 5px;
+}
+
+.project h5 {
+	margin-bottom: 5px;
+}
+
+ul.technologies {
+	padding-left: 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+	ul.technologies li {
+		white-space: nowrap;
+		margin-right: 20px;
+	}
+
+	ul.technologies span {
+		margin-left: -8px;
+	}
+
+.project {
+	page-break-inside: avoid;
+}
